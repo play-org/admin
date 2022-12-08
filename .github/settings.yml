@@ -21,4 +21,4 @@ branches:
       required_status_checks:
         # Required. Require branches to be up to date before merging.
         strict: true
-      require_signed_commits: true
+      #require_signed_commits: true
