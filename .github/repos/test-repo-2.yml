@@ -1,6 +1,7 @@
 repository: 
   # Name of the repo
   name: test-repo-2
+  create: true
 
   security:
    enableVulnerabilityAlerts: false
