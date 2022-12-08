@@ -18,6 +18,7 @@ branches:
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
         require_code_owner_reviews: true
+        enforce_admins: true
       required_status_checks:
         # Required. Require branches to be up to date before merging.
         strict: true
