@@ -1,0 +1,6 @@
+repository: 
+  # Name of the repo
+  name: test-repo-2
+
+  security:
+   enableVulnerabilityAlerts: false
