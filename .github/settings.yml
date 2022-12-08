@@ -7,9 +7,9 @@ repository:
   has_issues: false
 
 branches:
-  - name: main
+  - name: default
     # Branch Protection settings. Set to null to disable
-    protection: null
+    protection:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
