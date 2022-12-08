@@ -9,7 +9,7 @@ branches:
   - name: default
     # Branch Protection settings. Set to null to disable
     protection:
-      require_signed_commits: true
+      required_signatures: true
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
