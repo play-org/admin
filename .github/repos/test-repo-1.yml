@@ -1,0 +1,9 @@
+repository: 
+  # Name of the repo
+  name: test-repo-1
+
+  security:
+   enableVulnerabilityAlerts: false
+
+  has_issues: true
+  private: false
