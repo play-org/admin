@@ -4,6 +4,7 @@ repository:
     enable_automated_security_fixes: true
     secret_scanning_alerts: true
   has_issues: false
+  has_downloads: false
 
 branches:
   - name: default
