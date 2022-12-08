@@ -6,3 +6,4 @@ repository:
    enableVulnerabilityAlerts: false
 
   has_issues: true
+  private: false
