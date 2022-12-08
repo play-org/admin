@@ -1,6 +1,7 @@
 repository:
   security:
     enableVulnerabilityAlerts: true
+  has_issues: false
 
 restrictedRepos: 
   # You can exclude certain repos from safe-settings processing

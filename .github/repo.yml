@@ -4,3 +4,5 @@ repository:
 
   security:
    enableVulnerabilityAlerts: false
+
+  has_issues: true
