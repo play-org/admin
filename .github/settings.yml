@@ -2,6 +2,7 @@ repository:
   security:
     enableVulnerabilityAlerts: true
     enable_automated_security_fixes: true
+    secret_scanning: true
   has_issues: false
 
 restrictedRepos: 
