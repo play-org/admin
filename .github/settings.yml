@@ -2,6 +2,7 @@ repository:
   security:
     enableVulnerabilityAlerts: true
     enable_automated_security_fixes: true
+    secret_scanning_alerts: true
   has_issues: false
 
 branches:
@@ -9,7 +10,6 @@ branches:
     # Branch Protection settings. Set to null to disable
     protection:
       required_signatures: true
-      secret_scanning_alerts: true
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
