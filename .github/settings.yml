@@ -3,13 +3,13 @@ repository:
     enableVulnerabilityAlerts: true
     enable_automated_security_fixes: true
     secret_scanning: true
-    require_signed_commits: true
   has_issues: false
 
 branches:
   - name: default
     # Branch Protection settings. Set to null to disable
     protection:
+      require_signed_commits: true
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
