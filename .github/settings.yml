@@ -3,7 +3,7 @@ repository:
     enableVulnerabilityAlerts: true
     enable_automated_security_fixes: true
     secret_scanning: true
-    signed_commits: false
+#    signed_commits: false
   has_issues: false
 
 branches:
