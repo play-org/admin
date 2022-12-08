@@ -3,34 +3,22 @@ repository:
     enableVulnerabilityAlerts: true
     enable_automated_security_fixes: true
     secret_scanning: true
+    signed_commits: true
   has_issues: false
 
-restrictedRepos: 
-  # You can exclude certain repos from safe-settings processing
-  #  If no file is specified, then the following repositories - 'admin', '.github', 'safe-settings' are exempted by default
-  exclude: ['admin', '.github', 'safe-settings']
-  # Alternatively you can only include certain repos
-  # include: ['test']
-configvalidators:
-  - plugin: collaborators
-    error: |
-      `Admin cannot be assigned to collaborators`
-    script: |
-      console.log(`baseConfig ${JSON.stringify(baseconfig)}`)
-      return baseconfig.permission != 'admin'
-overridevalidators:
-  - plugin: branches   
-    error: |
-      `Branch protection required_approving_review_count cannot be overidden to a lower value`
-    script: |
-      console.log(`baseConfig ${JSON.stringify(baseconfig)}`)
-      console.log(`overrideConfig ${JSON.stringify(overrideconfig)}`)
-      if (baseconfig.protection.required_pull_request_reviews.required_approving_review_count && overrideconfig.protection.required_pull_request_reviews.required_approving_review_count ) {
-        return overrideconfig.protection.required_pull_request_reviews.required_approving_review_count >= baseconfig.protection.required_pull_request_reviews.required_approving_review_count 
-      }
-      return true
-  - plugin: labels
-    error: |
-      Some error
-    script: |
-      return true
+branches:
+  - name: main
+    # Branch Protection settings. Set to null to disable
+    protection:
+      # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+      required_pull_request_reviews:
+        # The number of approvals required. (1-6)
+        required_approving_review_count: 1
+        # Dismiss approved reviews automatically when a new commit is pushed.
+        dismiss_stale_reviews: true
+        # Blocks merge until code owners have reviewed.
+        require_code_owner_reviews: true
+      required_status_checks:
+        # Required. Require branches to be up to date before merging.
+        strict: true
+      require_signed_commits: true
